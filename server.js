@@ -1,7 +1,9 @@
 //Mon premier server Http
 
 const http = require("http");
+const queryString = require("query-string");
 const server = http.createServer((req, res) => {
+  
   console.log(req.url);
   let reqInfo = {
     url: req.url,
@@ -39,4 +41,4 @@ const server = http.createServer((req, res) => {
 });
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-const queryString = require("query-string");
+
