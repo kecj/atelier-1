@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify(reqInfo));
   } else {
     if (req.method == "POST") {
-      let body = {"FirstName": "Kyle", "LastName": "Ross", "Email": "Kyle.Ross@clg.qc.ca" };
+      let body = [];
       req
         .on("data", (chunk) => {
           body.push(chunk);
